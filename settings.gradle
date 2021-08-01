@@ -1,0 +1,2 @@
+rootProject.name = "HW_Design_onne"
+include ':app'
