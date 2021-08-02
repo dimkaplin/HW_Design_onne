@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HW_Design_onne</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="photo_of_the_day_stub">Photo of the day</string>
+    <string name="search_wiki">search_wiki</string>
+    <string name="wiki_helper_text">search_wiki_text</string>
 </resources>
