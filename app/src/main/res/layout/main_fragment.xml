@@ -12,8 +12,10 @@
         android:id="@+id/fragmentContainerView"
         android:name="com.example.lesson_design11.BottomSheetFragment"
         android:layout_width="419dp"
-        android:layout_height="428dp"
-        android:layout_marginTop="152dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="300dp"
+        app:layout_anchor="@+id/fragmentContainerView"
+        app:layout_anchorGravity="bottom|center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_bottom_sheet" />
@@ -29,19 +31,21 @@
         app:endIconMode="clear_text"
         app:helperText="@string/wiki_helper_text"
 
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_edit_text"
+            style="@style/AppButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.chip.Chip
-        style="@style/Widget.MaterialComponents.Chip.Choice"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choice"
@@ -87,5 +91,17 @@
         app:layout_anchor="@id/bottom_app_bar"
         app:srcCompat="@drawable/ic_plus_fab"
         app:tint="#FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        style="@style/AppButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textAppearance="@color/color_gray"
+        app:cornerRadius="44dp"
+        android:fontFamily="@string/material_motion_easing_decelerated"
+        app:layout_anchor="@+id/chip4"
+        app:layout_anchorGravity="start|bottom" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
