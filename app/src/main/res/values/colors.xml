@@ -13,4 +13,5 @@
     <color name="color_gray">#66000000</color>
     <color name="background">#FAFAFA</color>
     <color name="text_field_background">#582420</color>
+    <color name="colorAccent40Alfa">#B2F436</color>
 </resources>
