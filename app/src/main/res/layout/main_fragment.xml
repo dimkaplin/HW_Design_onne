@@ -41,6 +41,7 @@
             style="@style/AppButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -103,5 +104,13 @@
         app:cornerRadius="44dp"
         app:layout_anchor="@+id/chip4"
         app:layout_anchorGravity="start|bottom" />
+
+    <Button
+        android:id="@+id/btnAnimationOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AnimationOne"
+        app:layout_anchor="@+id/input_layout"
+        app:layout_anchorGravity="end|bottom" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

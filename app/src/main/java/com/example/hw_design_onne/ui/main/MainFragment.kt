@@ -3,6 +3,8 @@ package com.example.hw_design_onne.ui.main
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.transition.Slide
+import android.transition.TransitionManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,6 +37,11 @@ class MainFragment : Fragment() {
             Toast.makeText(context, "Выбран one", Toast.LENGTH_SHORT).show()
             //startActivity(Intent(it, ApiBottomActivity::class.java))
             startActivity(Intent(context, MAPIActivity::class.java))
+        }
+
+        btnAnimationOne.setOnClickListener{
+            TransitionManager.beginDelayedTransition(fragmentContainerView, Slide())
+               //fragmentContainerView.visibility = if (fragmentContainerView.visibility == View.GONE) View.VISIBLE else View.GONE
         }
     }
 
