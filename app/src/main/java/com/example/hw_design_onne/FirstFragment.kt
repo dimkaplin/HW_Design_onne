@@ -2,17 +2,19 @@ package com.example.hw_design_onne
 
 import android.graphics.Rect
 import android.os.Bundle
-import android.transition.Explode
-import android.transition.Transition
-import android.transition.TransitionManager
+import android.transition.*
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import android.widget.FrameLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw_design_onne.databinding.FragmentFirstBinding
+
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
@@ -21,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_first.*
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
+    private var toRightAnimation = false
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -41,6 +44,25 @@ class FirstFragment : Fragment() {
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        binding.btnSunDown.setOnClickListener{
+            val changeBounds = ChangeBounds()
+            changeBounds.setPathMotion(ArcMotion())
+            changeBounds.duration = 500
+            TransitionManager.beginDelayedTransition(
+                transitions_container,
+                changeBounds
+            )
+
+            toRightAnimation = !toRightAnimation
+            /*val params = binding.btnSunDown.layoutParams as FrameLayout.LayoutParams
+            params.gravity =
+                if (toRightAnimation) Gravity.END or Gravity.BOTTOM else Gravity.START or Gravity.TOP
+            binding.btnSunDown.layoutParams = params*/
+
+
+
         }
 
     }

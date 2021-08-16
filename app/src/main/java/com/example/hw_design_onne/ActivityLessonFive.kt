@@ -1,10 +1,9 @@
 package com.example.hw_design_onne
 
 import android.graphics.Rect
+import android.os.Build
 import android.os.Bundle
-import android.transition.Explode
-import android.transition.Transition
-import android.transition.TransitionManager
+import android.transition.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,6 +64,22 @@ class ActivityLessonFive : AppCompatActivity() {
         }
         explode.duration = 1000
         TransitionManager.beginDelayedTransition(recycler_view, explode)
+        /*explode.excludeTarget(clickedView, true)
+        val set = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            TransitionSet()
+                .addTransition(explode)
+                .addTransition(Fade().addTarget(clickedView))
+                .addListener(object : TransitionListenerAdapter() {
+                    override fun onTransitionEnd(transition: Transition) {
+                        transition.removeListener(this)
+                        onBackPressed()
+                    }
+                })
+        } else {
+            TODO("VERSION.SDK_INT < O")
+        }
+        TransitionManager.beginDelayedTransition(recycler_view, set)*/
+
         recycler_view.adapter = null
     }
 
