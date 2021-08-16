@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HW_Design_onne">
-        <activity android:name=".MAPIActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".AnimActivityTwo"
+            android:label="@string/title_activity_anim_two"
+            android:theme="@style/Theme.HW_Design_onne.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.main.ActivityAnimationsExplodeRecycleViewItem" />
+        <activity
+            android:name=".ActivityLessonFive"
+            android:label="@string/title_activity_lesson_five"
+            android:theme="@style/Theme.HW_Design_onne.NoActionBar">
+
+        </activity>
+        <activity android:name=".MAPIActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
