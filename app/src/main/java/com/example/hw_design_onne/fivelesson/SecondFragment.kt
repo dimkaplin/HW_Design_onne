@@ -1,4 +1,4 @@
-package com.example.hw_design_onne
+package com.example.hw_design_onne.fivelesson
 
 import android.os.Bundle
 import android.transition.Slide

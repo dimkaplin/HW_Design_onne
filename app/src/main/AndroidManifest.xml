@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HW_Design_onne">
+        <activity android:name=".ActivityRecyclerItemHeader"></activity>
+        <activity android:name=".ActivityRecycler" />
+        <activity android:name=".ActivityRecycleViewItemMars" />
+        <activity android:name=".ActivityRecycleItemEarth" />
         <activity
-            android:name=".AnimActivityTwo"
+            android:name=".fivelesson.AnimActivityTwo"
             android:label="@string/title_activity_anim_two"
             android:theme="@style/Theme.HW_Design_onne.NoActionBar">
             <intent-filter>
@@ -21,11 +25,9 @@
         </activity>
         <activity android:name=".ui.main.ActivityAnimationsExplodeRecycleViewItem" />
         <activity
-            android:name=".ActivityLessonFive"
+            android:name=".fivelesson.ActivityLessonFive"
             android:label="@string/title_activity_lesson_five"
-            android:theme="@style/Theme.HW_Design_onne.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.HW_Design_onne.NoActionBar" />
         <activity android:name=".MAPIActivity" />
         <activity android:name=".MainActivity" />
     </application>

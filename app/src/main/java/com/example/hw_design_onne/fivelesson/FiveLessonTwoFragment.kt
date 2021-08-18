@@ -1,4 +1,4 @@
-package com.example.hw_design_onne
+package com.example.hw_design_onne.fivelesson
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.hw_design_onne.R
 import kotlinx.android.synthetic.main.five_lesson_two_fragment.*
 
 class FiveLessonTwoFragment : Fragment() {
