@@ -1,4 +1,4 @@
-package com.example.hw_design_onne
+package com.example.hw_design_onne.fivelesson
 
 import android.os.Bundle
 import android.transition.ChangeBounds
@@ -13,6 +13,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.hw_design_onne.R
 import com.example.hw_design_onne.databinding.ActivityAnimTwoBinding
 import kotlinx.android.synthetic.main.fragment_first2.*
 

@@ -1,13 +1,11 @@
-package com.example.hw_design_onne
+package com.example.hw_design_onne.fivelesson
 
 import android.graphics.Rect
-import android.os.Build
 import android.os.Bundle
 import android.transition.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -15,9 +13,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hw_design_onne.R
 import com.example.hw_design_onne.databinding.ActivityLessonFiveBinding
 import kotlinx.android.synthetic.main.fragment_first.*
-import kotlinx.android.synthetic.main.fragment_second.*
 
 class ActivityLessonFive : AppCompatActivity() {
 
