@@ -12,6 +12,13 @@
         android:layout_margin="16dp"
         android:text="SHUFFLE" />
 
+    <TextView
+        android:id="@+id/tvExperimentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akronim"
+        android:text="@string/besley_text" />
+
     <LinearLayout
         android:id="@+id/transitions_container"
         android:layout_width="match_parent"

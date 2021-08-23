@@ -1,5 +1,6 @@
 package com.example.hw_design_onne.fivelesson
 
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hw_design_onne.R
 import com.example.hw_design_onne.databinding.FragmentFirst2Binding
+import kotlinx.android.synthetic.main.fragment_first2.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -36,6 +38,11 @@ class First2Fragment : Fragment() {
         binding.button.setOnClickListener {
             findNavController().navigate(R.id.action_First2Fragment_to_Second2Fragment)
         }
+
+        activity?.let {
+            tvExperimentStyle.typeface = Typeface.createFromAsset(it.assets, "Besley-Italic-VariableFont_wght.ttf")// или "fonts/Niceyear.ttf", если шрифты в папке assets/fonts
+        }
+
     }
 
     override fun onDestroyView() {
