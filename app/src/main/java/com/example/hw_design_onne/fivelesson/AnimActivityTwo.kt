@@ -1,10 +1,14 @@
 package com.example.hw_design_onne.fivelesson
 
+import android.animation.Animator
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
 import android.view.Gravity
 import android.view.ViewGroup
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +17,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.hw_design_onne.MainActivity
 import com.example.hw_design_onne.R
 import com.example.hw_design_onne.databinding.ActivityAnimTwoBinding
 import kotlinx.android.synthetic.main.fragment_first2.*
@@ -21,6 +26,7 @@ class AnimActivityTwo : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityAnimTwoBinding
+    var handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +55,25 @@ class AnimActivityTwo : AppCompatActivity() {
             titles.shuffle()
             createViews(transitions_container, titles)
         }
+
+      /*  image_view.animate().rotationBy(550f)
+            .setInterpolator(AccelerateDecelerateInterpolator()).setDuration(2750)
+            .setListener(object : Animator.AnimatorListener {
+
+                override fun onAnimationEnd(animation: Animator?) {
+//                   startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+//                   finish()
+                }
+
+                override fun onAnimationRepeat(animation: Animator?) {}
+                override fun onAnimationCancel(animation: Animator?) {}
+                override fun onAnimationStart(animation: Animator?) {}
+            })*/
+
+        handler.postDelayed({
+            startActivity(Intent(this@AnimActivityTwo, MainActivity::class.java))
+            finish()
+        }, 3000)
 
     }
 

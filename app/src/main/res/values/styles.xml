@@ -14,6 +14,7 @@
         <item name="colorSurface">#FFFFFF</item>
         <item name="colorOnSurface">#212121</item>
         <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/color_gray</item>
         <item name="colorOnBackground">#212121</item>
         <item name="materialButtonStyle">@style/AppButton</item>
         <item name="textInputStyle">@style/AppTextField</item>
